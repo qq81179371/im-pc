@@ -1,0 +1,33 @@
+/* Element Chalk Variables */
+@use "sass:math";
+@use "sass:map";
+/* 改变主题色变量 */
+$--colors: () !default;
+$--colors: map.deep-merge(
+  (
+    'white': #ffffff,
+    'black': #000000,
+    'primary': (
+      'base': #0071C4,
+    ),
+    'success': (
+      'base': #67c23a,
+    ),
+    'warning': (
+      'base': #e6a23c,
+    ),
+    'danger': (
+      'base': #f56c6c,
+    ),
+    'error': (
+      'base': #f56c6c,
+    ),
+    'info': (
+      'base': #909399,
+    ),
+  ),
+  $--colors
+);
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: 'node_modules/element-plus/lib/theme-chalk/fonts';
+@import "node_modules/element-plus/packages/theme-chalk/src/index.scss";
